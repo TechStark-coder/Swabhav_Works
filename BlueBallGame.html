@@ -1,0 +1,79 @@
+<html>
+
+<head>
+
+<body>
+    <h1 class="glow"> Blue Ball Game</h1>
+    <link rel="stylesheet" href="blueballcss.css">
+    <!-- <div class="bcontainer"> -->
+    <div>
+        <!-- <button onclick="myFunction()">Lets play</button>
+                <p id="demo"></p> -->
+        -----------------> Start the Game ------>
+        <div class="slidergame">
+            <input type="range" min="1" max="50" value="20" class="slider" id="slider">
+            <p> Select Ball point : <sabn id="outputValue"></sabn>
+            <p> Rules : Player has 60 seconds of Time
+                > Selected range will have a button with blue color
+                > Game showsm hint to player by giving red, green indication
+                > if answer is at ;eft side it shows red
+                >or if answer is at right side it shows green color!.
+            </p>
+            <button class="button-send">ok</button>
+            <div>
+                <!-- <p> Current Value : <sabn id="outputValue"></sabn></p> -->
+                <div class="button-slidergame"></div>
+                <div class="button-container"></div>
+            </div>
+
+            <script>
+                var slider = document.getElementById("slider");
+                var output = document.getElementById("outputValue");
+                const slidergame = document.querySelector(".button-slidergame");
+                const buttonOk = document.querySelector(".button-send");
+                let win = false;
+                output.innerHTML = slidergame.value;
+                let myNumber = 0;
+                slider.oninput = function () {
+                    output.innerHTML = this.value;
+                    slidergame.innerHTML = ' ';
+                };
+                // add event listener
+                buttonOk.addEventListener("click", getBall);
+                function getBall() {
+                    myNumber = Math.floor(Math.random() * slider.value) + 1; // generate random slider.va;ue
+                    let ab = document.createElement("p");
+                    slidergame.appendChild(ab);
+                    // let Timer = 10
+                    for (let i = 1; i < slider.value; i++) {
+                        var button = document.createElement("button");
+                        button.setAttribute("class", "btn");
+                        button.textContent = i;
+                        slidergame.appendChild(button);
+                        button.addEventListener("click", function (e) {
+                            console.log(e);
+                            // function myFunction() {
+                            //     document.getElementById("slidergame");}
+
+                            // seting the required conditions!
+                            if (e.target.textContent == myNumber) {
+                                // win==true;
+                                win = true;
+                                this.style.backgroundColor = "blue";
+                                setTimeout(function () {
+                                    alert("you won the game");
+                                });
+                            }
+                            // give hint to player by indication left as green,  right as red
+                            else if (e.target.textContent < myNumber) { this.style.backgroundColor = "green"; } else {
+                                this.style.backgroundColor = "red";
+                            }
+                        });
+                    }
+                }</script>
+        </div>
+    </div>
+</body>
+</head>
+
+</html>

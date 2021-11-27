@@ -1,0 +1,23 @@
+<html>
+    <script>
+        'use strict'
+        var DataService = function(){
+            var obj = {}
+            console.log("insidee dataservice");
+            obj.doTask1 = function(){
+                console.log("ding task 1");
+            }
+            obj.doTask2 = function(){
+                console.log("doing task 2");
+            }
+            obj.getData = function(){
+                return Math.random()*100;
+            }
+            return obj;
+        }();
+
+        DataService().doTask1();
+        DataService().doTask2();
+        console.log(DataService().getData());
+    </script>
+</html>

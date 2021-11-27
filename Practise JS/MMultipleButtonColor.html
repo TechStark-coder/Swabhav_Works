@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <h1> Multiple Button Colors</h1>
+        <style>
+            #red
+            {
+                width: 25%;
+                height: 50%;
+                background-color: red;
+                float: left;
+                /* margin-left: 30%; */
+            }
+            #green
+            {
+                width: 25%;
+                height: 50%;
+                background-color: green;
+                float: left;
+            }
+            #blue
+            {
+                width: 25%;
+                height: 50%;
+                background-color: blue;
+                float: left;
+            }
+        </style>
+    </head>
+    <body bgcolor="gray">
+        <input type="button" value="red" id="btn1" style="position: absolute;">
+        <div id="red"></div>
+        <input type="button" value="green" id="btn2" style="position: absolute;left: 40%;">
+        <div id="green"></div>
+        <input type="button" value="blue" id="btn3" style="position: absolute;left: 70%;">
+        <div id="blue"></div>
+
+        <script>
+            //using wrapper and strict 
+            (function(){
+                'use strict'
+                document.getElementById("btn1").addEventListener("click", function(){
+                var box1=document.getElementById("red");
+                if(box1.style.display=="none"){
+                    box1.style.display="block";
+                }
+                else{
+                    box1.style.display="none";
+                }
+            })
+            document.getElementById("btn2").addEventListener("click", function(){
+                var box2=document.getElementById("green");
+                if(box2.style.display=="none"){
+                    box2.style.display="block";
+                }
+                else{
+                    box2.style.display="none";
+                }
+            })
+            document.getElementById("btn3").addEventListener("click", function(){
+                var box3=document.getElementById("blue");
+                if(box3.style.display=="none"){
+                    box3.style.display="block";
+                }
+                else{
+                    box3.style.display="none";
+                }
+            })
+            })();
+        </script>
+        
+    </body>
+</html>

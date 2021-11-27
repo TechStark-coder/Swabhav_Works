@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title Delay></title>
+    </head>
+    <body>
+        <input type="button" value="delay" style="background-color: cornflowerblue ;" id="btn" onclick="delayHandler()"/><br></br>
+        <input type="button" value="helloHandler" style="background-color: red ;" id="btn1" onclick="helloHandler()"/><br></br>
+        <input type="button" value="goodByeHandler" style="background-color: green ;" id="btn2" onclick="goodByeHandler()"/><br></br>
+    </body>
+    <script>
+        function delayHandler(){
+            delay(5);
+            console.log("after the delay");
+        }
+        function delay(seconds){
+            var startTime =Date.now();
+            while (Date.now() - startTime < seconds * 1000);
+        }
+        function helloHandler(){
+            console.log("hello");
+        }
+        function goodByeHandler(){
+            console.log("good bye");
+        }
+        
+    </script>
+</html>

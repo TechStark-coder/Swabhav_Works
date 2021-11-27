@@ -1,0 +1,12 @@
+div {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: black;
+    color: #fff;
+    border-radius: 5px;
+}

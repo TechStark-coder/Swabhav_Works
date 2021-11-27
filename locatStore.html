@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <h1> Local storage checks</h1>
+    </head>
+    <div id  = "students" ></div>
+
+    </div>
+    <script>
+        //CLASSWORK EXPLAINATION 
+        // var student = {id : 100, name : 'faisal'}
+        // console.log(student.id);
+        // console.log(student['id']);
+        // console.log(student['name']);
+        // console.log(typeof localStorage);
+        // localStorage['monocept.student'] = student.toString();
+        // console.log(localStorage['monocept.student']);
+        // localStorage['monocept.student'] = JSON.stringify(student);
+
+        // student = JSON.parse(localStorage['monocept.student']);
+        // console.log(student);
+        
+        //Works
+        // var students =
+        //     [{name : 'abc',cgpa : 9, location: 'hyderabad'},
+        //     {name : 'pqr',cgpa : 5 , location : 'mumbai'},
+        //     {name : 'james',cgpa : 9 , location : 'hyderabad'},
+        //     {name : 'clark',cgpa : 9 , location : 'Mysore'},
+        //     {name : 'nick',cgpa : 9 , location : 'kerala'},
+        //     {name : 'mark',cgpa : 7 , location : 'hyderabad'},
+        //     {name : 'xyz',cgpa : 7, location: 'chennai'}];
+        // localStorage['monocept.students'] = JSON.stringify(students);
+        // students = localStorage["monocept.students"];
+        // students = JSON.parse(localStorage['monocept.students']);
+        // console.log(students);
+
+        //filtered students who have CGPA of 9
+        var filter = students.filter(function(students){
+            return students.cgpa === 9;
+            });
+            console.log(filter);
+        //Filtered students who are from city = hyderabad    
+            var filter = students.filter(function(students){
+                return students.location === "hyderabad";
+            });
+            
+            console.log(filter);
+
+
+
+
+            // create map only locations and names
+            var map1 = new Map();
+            map1.set('France' , 'Faisal');
+            map1.set('Paris' , 'Prashant');
+            map1.set('America' , 'Ankit');
+            map1.set('New york' , 'Nongamba');
+            map1.set('Hyderabad' , 'Asif');
+            
+            console.log(map1);
+
+
+    
+    
+    </script>
+</html>

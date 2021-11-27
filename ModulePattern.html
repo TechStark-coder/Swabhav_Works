@@ -1,0 +1,52 @@
+<html>
+    <script>
+        function makeCustomer(){
+            var customer={}
+            var _id,_name
+            customer.setId = function(id){
+                if(id>0){
+                    _id = id;
+                }
+            }
+            customer.setName = function(name){
+                if(name.length>0){
+                    _name = name;
+                }
+            }
+            customer.getDetails = function(){
+                return "customer id is "+_id+ " name is "+_name;
+            }
+            return customer;
+        }
+
+        var customer = makeCustomer();
+        customer.setId(100);
+        customer.setName("ankit");
+        console.log(customer);
+        console.log(customer.getDetails());
+
+        var c2 = makeCustomer();
+        c2.setId(200);
+        c2.setName("ananya");
+        console.log(c2);
+        console.log(c2.getDetails());
+
+        var c3 = makeCustomer();
+        c3.setId(300);
+        c3.setName("aryan");
+        console.log(c3);
+        console.log(c3.getDetails());
+
+        var c4 = makeCustomer();
+        c4.setId(300);
+        c4.setName("aryan");
+        console.log(c4);
+        console.log(c4.getDetails());
+
+        console.log(customer == c2);
+        console.log(c2 == c3);
+        console.log(customer == c2);
+        console.log(c3 == c4);
+        
+    </script>
+</html>

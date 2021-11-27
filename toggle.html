@@ -1,0 +1,44 @@
+<html>
+    <body>
+            <div>
+              <img id="img" height="77%" width="35%" src="images/google.gif"/>
+              <script>
+                //implemmenting wrapper and strict 
+              (function(){
+                'use strict'
+                function clicked(){
+                  if (img == 1){
+                    document.getElementById("img").style.display="inline"
+                    return img = 0;
+                  }else{
+                    document.getElementById("img").style.display="none"
+                    return img = 1;
+                  }
+                }
+              })();
+              </script>
+              <button id="button" value="off">button off</button>
+              <script>
+              var button = document.getElementById("button");
+              button.style.fontSize = '20px';
+              button.style.marginLeft = '50%';
+              button.style.marginRight = '50%';
+          
+              button.addEventListener("click", OnandOff);
+              function OnandOff(c) {
+                if(button.innerText == "button off") {
+                  button.innerText = "button on";
+                  document.getElementById('img').style.display = 'inline';
+                  button.style.backgroundColor = "red";
+                  document.bgColor = "green";
+                }
+                else{
+                  button.innerText = "button off";
+                  document.getElementById('img').style.display = 'inline';
+                  button.style.backgroundColor = "green";
+                  document.bgColor = "red"; }
+                }
+                </script>
+                </div>
+              </body>
+              </html>

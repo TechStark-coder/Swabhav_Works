@@ -1,0 +1,32 @@
+<script>
+
+    console.log(this);
+    console.log(this == window);
+    
+    
+    var foo = "abc";
+    
+    console.log(window);
+    console.log(window.foo == this.foo);
+    
+    console.log(typeof foo);
+    foo = 100;
+    console.log(typeof foo);
+    foo = 10>5;
+    console.log(typeof foo);
+    foo = 123457890.89;
+    console.log(typeof foo);
+    console.log(foo);
+    foo = function(){
+        console.log("inside expression");
+    }
+    console.log(typeof foo)
+    foo = {}
+    console.log(typeof foo)
+    foo.id=100
+    foo.name="abc"
+    console.log(foo)
+    </script>
+
+    <h1> click below to go back</h1>
+    <a href="indexx.html"> go back </a>
