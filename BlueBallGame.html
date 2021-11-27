@@ -44,7 +44,18 @@
                     myNumber = Math.floor(Math.random() * slider.value) + 1; // generate random slider.va;ue
                     let ab = document.createElement("p");
                     slidergame.appendChild(ab);
-                    // let Timer = 10
+                    let Timer = 60;
+                    setInterval(function () {
+                        --Timer;
+                        ab.innerHTML = "timer :" + Timer;
+                    }, 1000);
+                    setTimeout(function () {
+                        if (win != true) {
+                            alert("you lost the game!");
+                        }
+                        slidergame.innerHTML = "";
+                    }, 60000);
+                    // console.log(myNumber);
                     for (let i = 1; i < slider.value; i++) {
                         var button = document.createElement("button");
                         button.setAttribute("class", "btn");
