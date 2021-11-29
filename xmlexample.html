@@ -1,0 +1,26 @@
+<html>
+    <title>XML Http Request</title>
+
+    <body><h1> XML HTTP REQUEST</h1></body>
+    <script type="text/javascript">
+        const abc = new XMLHttpRequest();
+        // console.log(abc.readyState);
+        abc.onreadystatechange = function () {
+            if (abc.readyState == 4) {
+                if (abc.status == 200) {
+                    console.log(abc.responseText);
+                    // console.log(abc.responseURL);
+                    
+                }
+                if (abc.status == 404) {
+                    console.log('file not found!');
+                }
+            }
+        };
+        abc.open('get', 'meta.txt', true);
+        // abc.open('get', 'auth.asp', true);
+        
+        abc.send();
+    </script>
+    
+</html>
